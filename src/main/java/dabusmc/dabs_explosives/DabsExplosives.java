@@ -1,5 +1,6 @@
 package dabusmc.dabs_explosives;
 
+import dabusmc.dabs_explosives.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -13,6 +14,6 @@ public class DabsExplosives implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerItems();
 	}
 }
