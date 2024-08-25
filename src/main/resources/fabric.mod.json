@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "dabs-explosives",
+	"version": "${version}",
+	"name": "Dabs Explosives",
+	"description": "A 1.21 Fabric Mod that adds New and Exciting Explosive Devices",
+	"authors": [
+		"dabusmc"
+	],
+	"contact": {
+		"sources": "https://github.com/DabModding/Dabs-Explosives"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/dabs-explosives/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dabusmc.dabs_explosives.DabsExplosives"
+		],
+		"fabric-datagen": [
+			"dabusmc.dabs_explosives.DabsExplosivesDataGenerator"
+		],
+		"client": [
+			"dabusmc.dabs_explosives.DabsExplosivesClient"
+		]
+	},
+	"mixins": [
+		"dabs-explosives.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
