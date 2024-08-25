@@ -23,6 +23,11 @@ public class ExplosiveItem extends Item
         return new ExplosiveEntity(world, user);
     }
 
+    public int getCooldown()
+    {
+        return 20;
+    }
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
@@ -37,7 +42,7 @@ public class ExplosiveItem extends Item
                 0.5F,
                 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
-        user.getItemCooldownManager().set(this, 20);
+        //user.getItemCooldownManager().set(this, getCooldown());
         if (!world.isClient) {
             ExplosiveEntity explosiveEntity = getExplosiveEntity(world, user);
             explosiveEntity.setItem(itemStack);

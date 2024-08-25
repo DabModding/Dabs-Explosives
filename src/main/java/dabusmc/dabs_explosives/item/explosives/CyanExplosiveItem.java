@@ -1,13 +1,14 @@
 package dabusmc.dabs_explosives.item.explosives;
 
+import dabusmc.dabs_explosives.entity.explosives.CyanExplosiveEntity;
 import dabusmc.dabs_explosives.entity.explosives.ExplosiveEntity;
-import dabusmc.dabs_explosives.entity.explosives.RedExplosiveEntity;
+import dabusmc.dabs_explosives.entity.explosives.GreenExplosiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class RedExplosiveItem extends ExplosiveItem
+public class CyanExplosiveItem extends ExplosiveItem
 {
-    public RedExplosiveItem()
+    public CyanExplosiveItem()
     {
         super(new Settings());
     }
@@ -15,12 +16,14 @@ public class RedExplosiveItem extends ExplosiveItem
     @Override
     public ExplosiveEntity getExplosiveEntity(World world, PlayerEntity user)
     {
-        return new RedExplosiveEntity(world, user);
+        return new CyanExplosiveEntity(world, user);
     }
+
+
 
     @Override
     public int getCooldown()
     {
-        return 10;
+        return 30;
     }
 }

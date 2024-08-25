@@ -17,4 +17,10 @@ public class GreenExplosiveItem extends ExplosiveItem
     {
         return new GreenExplosiveEntity(world, user);
     }
+
+    @Override
+    public int getCooldown()
+    {
+        return 20;
+    }
 }

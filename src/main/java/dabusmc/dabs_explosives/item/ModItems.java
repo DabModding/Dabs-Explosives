@@ -1,6 +1,7 @@
 package dabusmc.dabs_explosives.item;
 
 import dabusmc.dabs_explosives.DabsExplosives;
+import dabusmc.dabs_explosives.item.explosives.CyanExplosiveItem;
 import dabusmc.dabs_explosives.item.explosives.GreenExplosiveItem;
 import dabusmc.dabs_explosives.item.explosives.LightBlueExplosiveItem;
 import dabusmc.dabs_explosives.item.explosives.RedExplosiveItem;
@@ -19,6 +20,8 @@ public class ModItems
             new LightBlueExplosiveItem());
     public static final Item GREEN_EXPLOSIVE = registerItem("green_explosive",
             new GreenExplosiveItem());
+    public static final Item CYAN_EXPLOSIVE = registerItem("cyan_explosive",
+            new CyanExplosiveItem());
 
     private static Item registerItem(String name, Item item)
     {
@@ -35,6 +38,7 @@ public class ModItems
             entries.add(RED_EXPLOSIVE);
             entries.add(LIGHT_BLUE_EXPLOSIVE);
             entries.add(GREEN_EXPLOSIVE);
+            entries.add(CYAN_EXPLOSIVE);
         });
     }
 }
